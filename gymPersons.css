@@ -1,0 +1,526 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eeeeee;
+    color: #222222;
+    line-height: 1.6;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button, select {
+    font-family: Arial, sans-serif;
+}
+
+.encabezado {
+    background-color: #242424;
+    color: white;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: #80b85a;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    font-size: 14px;
+    color: #eeeeee;
+}
+
+.menu a:hover {
+    color: #a4ce87;
+}
+
+.boton_menu {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.inicio {
+    background-color: #303030;
+    color: white;
+    padding: 70px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.inicio_contenido {
+    width: 55%;
+}
+
+.etiqueta {
+    color: #a4ce87;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.inicio h1 {
+    font-size: 45px;
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.inicio h1 span {
+    color: #a4ce87;
+}
+
+.inicio_contenido p {
+    color: #dddddd;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.boton_principal {
+    display: inline-block;
+    background-color: #80b85a;
+    color: #172015;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.boton_principal:hover {
+    background-color: #a4ce87;
+}
+
+.inicio_imagen {
+    width: 40%;
+    text-align: center;
+}
+
+.circulo_pesa {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    border: 4px solid #80b85a;
+    overflow: hidden;
+    margin: auto;
+}
+
+.circulo_pesa img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.inicio_imagen p {
+    margin-top: 20px;
+    color: #a4ce87;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.seccion {
+    padding: 65px 8%;
+}
+
+.seccion_alterna {
+    background-color: #e2e2e2;
+}
+
+.titulo_seccion {
+    margin-bottom: 30px;
+}
+
+.titulo_seccion span {
+    font-size: 13px;
+    color: #507d36;
+    font-weight: bold;
+}
+
+.titulo_seccion h2 {
+    font-size: 30px;
+    margin: 8px 0;
+    color: #242424;
+}
+
+.titulo_seccion p {
+    color: #555555;
+    max-width: 700px;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.tarjeta {
+    background-color: white;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    padding: 22px;
+}
+
+.tarjeta h3 {
+    color: #426b2e;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.tarjeta p {
+    color: #444444;
+    font-size: 15px;
+}
+
+.selector_musculos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.boton_musculo {
+    background-color: white;
+    color: #333333;
+    border: 1px solid #aaaaaa;
+    border-radius: 4px;
+    padding: 10px 17px;
+    cursor: pointer;
+}
+
+.boton_musculo:hover,
+.boton_musculo.activo {
+    background-color: #80b85a;
+    color: #172015;
+    border-color: #80b85a;
+}
+
+.informacion_musculo {
+    background-color: white;
+    border: 1px solid #cccccc;
+    padding: 25px;
+    border-radius: 4px;
+}
+
+.informacion_musculo h3 {
+    color: #426b2e;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.informacion_musculo p {
+    color: #444444;
+    margin-bottom: 15px;
+}
+
+.informacion_musculo h4 {
+    margin-bottom: 10px;
+}
+
+.lista_ejercicios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.ejercicio {
+    background-color: #f3f3f3;
+    border: 1px solid #dddddd;
+    padding: 18px;
+    border-radius: 4px;
+}
+
+.ejercicio h4 {
+    color: #426b2e;
+    margin-bottom: 10px;
+}
+
+.ejercicio p {
+    margin-bottom: 10px;
+}
+
+.ejercicio span {
+    font-weight: bold;
+    color: #426b2e;
+    font-size: 14px;
+}
+
+.configuracion_rutina {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.configuracion_rutina label {
+    font-weight: bold;
+}
+
+.configuracion_rutina select {
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #aaaaaa;
+    border-radius: 4px;
+}
+
+.resultado_rutina {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.dia_rutina {
+    background-color: white;
+    border: 1px solid #cccccc;
+    border-left: 4px solid #80b85a;
+    padding: 20px;
+}
+
+.dia_rutina h3 {
+    color: #426b2e;
+    margin-bottom: 10px;
+}
+
+.dia_rutina p {
+    color: #444444;
+}
+
+.nota {
+    color: #555555;
+    font-size: 14px;
+    margin-top: 25px;
+}
+
+.errores {
+    background-color: white;
+    border: 1px solid #cccccc;
+    padding: 25px;
+    margin-top: 30px;
+}
+
+.errores h3 {
+    color: #426b2e;
+    margin-bottom: 15px;
+}
+
+.errores ul {
+    padding-left: 25px;
+}
+
+.errores li {
+    margin-bottom: 10px;
+    color: #444444;
+}
+
+.contenedor_transformacion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.tarjeta_transformacion {
+    background-color: white;
+    border: 1px solid #cccccc;
+    padding: 20px;
+    text-align: center;
+    min-width: 0;
+}
+
+.tarjeta_transformacion h3 {
+    color: #426b2e;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.imagen_transformacion {
+    height: 320px;
+    background-color: #eeeeee;
+    overflow: hidden;
+}
+
+.imagen_transformacion img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.tarjeta_transformacion p {
+    margin-top: 15px;
+    color: #444444;
+}
+
+.mensaje_motivacion {
+    margin-top: 30px;
+    font-size: 21px;
+    font-weight: bold;
+    text-align: center;
+    color: #426b2e;
+}
+
+.pie_pagina {
+    background-color: #242424;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+.pie_pagina h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.pie_pagina h2 span {
+    color: #80b85a;
+}
+
+.pie_pagina p {
+    color: #dddddd;
+    margin-top: 5px;
+}
+
+@media (max-width: 1000px) {
+    .inicio {
+        gap: 25px;
+    }
+
+    .inicio h1 {
+        font-size: 36px;
+    }
+
+    .circulo_pesa {
+        width: 220px;
+        height: 220px;
+    }
+
+    .lista_ejercicios {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .resultado_rutina {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 750px) {
+    .encabezado {
+        flex-wrap: wrap;
+    }
+
+    .boton_menu {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .menu.mostrar {
+        display: flex;
+    }
+
+    .menu a {
+        padding: 10px 0;
+        border-top: 1px solid #555555;
+    }
+
+    .inicio {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 6%;
+    }
+
+    .inicio_contenido {
+        width: 100%;
+    }
+
+    .inicio_imagen {
+        width: 100%;
+    }
+
+    .seccion {
+        padding: 50px 6%;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .lista_ejercicios {
+        grid-template-columns: 1fr;
+    }
+
+    .resultado_rutina {
+        grid-template-columns: 1fr;
+    }
+
+    .contenedor_transformacion {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 450px) {
+    .inicio h1 {
+        font-size: 30px;
+    }
+
+    .circulo_pesa {
+        width: 200px;
+        height: 200px;
+    }
+
+    .titulo_seccion h2 {
+        font-size: 26px;
+    }
+
+    .informacion_musculo {
+        padding: 18px;
+    }
+
+    .imagen_transformacion {
+        height: 280px;
+    }
+
+    .mensaje_motivacion {
+        font-size: 18px;
+    }
+}

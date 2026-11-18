@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guía para principiantes en el Gym">
+    <title>Guía para principiantes en el Gym</title>
+    <link rel="icon" type="image/png" href="assets/Imagenes/icono.png">
+    <link rel="stylesheet" href="gymPersons.css">
+    <script src="gymPersons.js" defer></script>
+</head>
+<body>
+
+    <header class="encabezado">
+        <a href="#inicio" class="logo">GYM<span>PERSONS</span></a>
+
+        <button id="boton_menu" class="boton_menu" aria-label="Abrir menú" aria-expanded="false">
+            ☰
+        </button>
+
+        <nav id="menu" class="menu">
+            <a href="#inicio">Inicio</a>
+            <a href="#primeros_pasos">Básico</a>
+            <a href="#musculos">Músculos</a>
+            <a href="#tipos_entrenamiento">Entrenamientos</a>
+            <a href="#rutinas">Rutinas</a>
+            <a href="#consejos">Consejos</a>
+            <a href="#motivacion">Motivación</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="inicio" class="inicio">
+            <div class="inicio_contenido">
+                <span class="etiqueta">GUÍA PARA PRINCIPIANTES</span>
+                <h1>PARA NO SER OTRO <br><span>BRAYAN SOTO</span></h1>
+                <p>
+                    En esta página aprenderás lo básico sobre el gimnasio,
+                    desde rutinas y grupos musculares hasta los diferentes
+                    tipos de entrenamiento
+                </p>
+                <a href="#primeros_pasos" class="boton_principal">
+                    Empezar
+                </a>
+            </div>
+
+            <div class="inicio_imagen">
+                <div class="circulo_pesa">
+                    <img src="assets/Imagenes/Uri.jpeg" alt="Imagen de gimnasio">
+                </div>
+                <p>PESADO • DURO • AL FALLO</p>
+            </div>
+        </section>
+
+        <section id="primeros_pasos" class="seccion">
+            <div class="titulo_seccion">
+                <span>INTRODUCCIÓN</span>
+                <h2>Básico</h2>
+                <p>Todo lo que necesitas saber antes de comenzar</p>
+            </div>
+
+            <div class="tarjetas">
+                <article class="tarjeta">
+                    <h3>Define tu objetivo</h3>
+                    <p>
+                        Decide si quieres ganar músculo, mejorar tu
+                        fuerza, aumentar tu resistencia o simplemente
+                        tener una mejor salud. Es importante tener
+                        un objetivo, porque de eso dependerá el tipo
+                        de entrenamiento que quieras llevar
+                    </p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Organiza tus días</h3>
+                    <p>
+                        Comienza entrenando de 3 a 4 días por semana
+                        de manera ligera. Cuando tu cuerpo se acostumbre,
+                        podrás ir aumentando el peso poco a poco.
+                        Es importante que seas constante, ya que
+                        la constancia es clave para progresar
+                    </p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Aprende la técnica</h3>
+                    <p>
+                        Antes de entrenar al fallo, asegúrate de aprender
+                        correctamente la técnica de cada ejercicio,
+                        porque si no lo haces podrías lesionarte.
+                        Algunas lesiones pueden llegar a tener
+                        consecuencias a largo plazo
+                    </p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Registra tu progreso</h3>
+                    <p>
+                        Anota los ejercicios, pesos y repeticiones
+                        que realizas para llevar un registro de tus avances.
+                        Además, si algún día se te olvida cuánto peso
+                        cargabas, solamente tendrás que revisar
+                        tus anotaciones
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section id="musculos" class="seccion seccion_alterna">
+            <div class="titulo_seccion">
+                <span>ENTRENAMIENTO</span>
+                <h2>Grupos musculares</h2>
+                <p>
+                    Selecciona un grupo muscular para conocer sus
+                    ejercicios recomendados y aprender cómo realizarlos
+                </p>
+            </div>
+
+            <div class="selector_musculos">
+                <button class="boton_musculo activo" data-musculo="pecho">Pecho</button>
+                <button class="boton_musculo" data-musculo="espalda">Espalda</button>
+                <button class="boton_musculo" data-musculo="piernas">Piernas</button>
+                <button class="boton_musculo" data-musculo="hombros">Hombros</button>
+                <button class="boton_musculo" data-musculo="biceps">Bíceps</button>
+                <button class="boton_musculo" data-musculo="triceps">Tríceps</button>
+                <button class="boton_musculo" data-musculo="abdomen">Abdomen</button>
+            </div>
+
+            <div id="informacion_musculo" class="informacion_musculo" aria-live="polite"></div>
+        </section>
+
+        <section id="tipos_entrenamiento" class="seccion">
+            <div class="titulo_seccion">
+                <span>TIPOS DE ENTRENAMIENTO</span>
+                <h2>Formas de entrenar</h2>
+                <p>
+                    Existen diferentes formas de entrenar dependiendo
+                    de tus objetivos. Aquí te explicaré algunas
+                    de las más conocidas
+                </p>
+            </div>
+
+            <div class="tarjetas">
+                <article class="tarjeta">
+                    <h3>Heavy Duty</h3>
+                    <p>
+                        Es un método de entrenamiento popularizado por
+                        Mike Mentzer. Se caracteriza por realizar pocas
+                        series de trabajo con una intensidad muy alta,
+                        normalmente llegando al fallo muscular.
+                        También le da mucha importancia al descanso
+                        y a la recuperación entre entrenamientos
+                    </p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Powerlifting</h3>
+                    <p>
+                        Es un deporte de fuerza que se enfoca en tres
+                        movimientos principales: sentadilla, press de
+                        banca y peso muerto. Su objetivo es levantar
+                        la mayor cantidad de peso posible en estos
+                        ejercicios, siguiendo las reglas de competición
+                    </p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Hipertrofia</h3>
+                    <p>
+                        Este tipo de entrenamiento tiene como objetivo
+                        aumentar el tamaño de los músculos. Se utilizan
+                        ejercicios con pesas, máquinas o el propio peso
+                        corporal, buscando aumentar progresivamente
+                        el esfuerzo y el volumen de entrenamiento
+                    </p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Calistenia</h3>
+                    <p>
+                        Es una forma de entrenamiento que utiliza
+                        principalmente el peso corporal. Incluye
+                        ejercicios como dominadas, flexiones, fondos
+                        y sentadillas. Ayuda a desarrollar fuerza,
+                        coordinación y control del cuerpo
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section id="rutinas" class="seccion">
+            <div class="titulo_seccion">
+                <span>RUTINAS</span>
+                <h2>Elige tu rutina</h2>
+                <p>
+                    Elige cuántos días entrenarás y se te mostrará
+                    un plan de entrenamiento
+                </p>
+            </div>
+
+            <div class="configuracion_rutina">
+                <label for="dias_entrenamiento">
+                    Días de entrenamiento por semana
+                </label>
+
+                <select id="dias_entrenamiento">
+                    <option value="3">3 días</option>
+                    <option value="4">4 días</option>
+                    <option value="5">5 días</option>
+                    <option value="6">6 días</option>
+                </select>
+
+                <button id="generar_rutina" class="boton_principal">
+                    Generar rutina
+                </button>
+            </div>
+
+            <div id="resultado_rutina" class="resultado_rutina" aria-live="polite"></div>
+
+            <p class="nota">
+                Utilicé como referencia algunas rutinas de entrenamiento.
+                Puedes ajustar los ejercicios según tus objetivos,
+                experiencia y capacidad de recuperación
+            </p>
+        </section>
+
+        <section id="consejos" class="seccion seccion_alterna">
+            <div class="titulo_seccion">
+                <span>CONSEJOS</span>
+                <h2>Consejos para ser como tu marido Moisés</h2>
+                <p>
+                    Estos son algunos consejos que me hubiera gustado
+                    que alguien me diera cuando empecé a entrenar
+                </p>
+            </div>
+
+            <div class="tarjetas">
+                <article class="tarjeta">
+                    <h3>Alimentación</h3>
+                    <p>
+                        Mantén una alimentación equilibrada con suficientes
+                        proteínas, carbohidratos y grasas saludables.
+                        Recuerda que alimentarte correctamente es
+                        importante para conseguir tus objetivos
+                    </p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Descanso</h3>
+                    <p>
+                        Procura dormir entre 7 y 9 horas por noche
+                        si eres adulto. Es importante descansar bien
+                        para recuperarte y poder dar el 110%
+                        en tus entrenamientos
+                    </p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Hidratación</h3>
+                    <p>
+                        Es importantísimo mantenerse hidratado.
+                        Si no tomas suficiente agua, podrías sufrir
+                        mareos, fatiga o incluso desmayarte durante
+                        el entrenamiento, especialmente si hace calor
+                    </p>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Sobrecarga progresiva</h3>
+                    <p>
+                        Aumenta gradualmente las repeticiones, el peso
+                        o la dificultad de los ejercicios cuando
+                        puedas realizarlos con buena técnica.
+                        Esto te ayudará a seguir progresando
+                    </p>
+                </article>
+            </div>
+
+            <div class="errores">
+                <h3>Errores comunes</h3>
+                <ul>
+                    <li>Levantar más peso del que puedes controlar</li>
+                    <li>Entrenar sin una rutina organizada</li>
+                    <li>Preferir levantar más peso y descuidar la técnica</li>
+                    <li>No descansar lo suficiente</li>
+                    <li>Comparar tu progreso con el de otras personas</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="motivacion" class="seccion">
+            <div class="titulo_seccion">
+                <span>MOTIVACIÓN</span>
+                <h2>Todos empezamos desde cero</h2>
+                <p>
+                    Nadie consigue resultados de un día para otro.
+                    Lo importante es ser constante y no rendirse.
+                    Aquí puedes ver cómo el esfuerzo y la disciplina
+                    pueden generar cambios con el tiempo
+                </p>
+            </div>
+
+            <div class="contenedor_transformacion">
+                <div class="tarjeta_transformacion">
+                    <h3>ANTES</h3>
+
+                    <div class="imagen_transformacion">
+                        <img src="assets/Imagenes/fredie.jpeg" alt="Antes de comenzar a entrenar">
+                    </div>
+
+                    <p>
+                        Antes de empezar no podia cargar ni una pesa de 10 lb
+                    </p>
+                </div>
+
+                <div class="tarjeta_transformacion">
+                    <h3>DESPUÉS</h3>
+
+                    <div class="imagen_transformacion">
+                        <img src="assets/Imagenes/CBUM.jpg" alt="Después de entrenar durante un tiempo">
+                    </div>
+
+                    <p>
+                        Después de meses de esfuerzo, constancia
+                        y dedicación, logró mejorar su físico
+                    </p>
+                </div>
+            </div>
+
+            <p class="mensaje_motivacion">
+                "Este año el pavo no va a ser lo único sabroso en navidad"
+            </p>
+        </section>
+
+    </main>
+
+    <footer class="pie_pagina">
+        <h2>GYM<span>PERSONS</span></h2>
+        <p>Con esta guía estarás igual que CBUM</p>
+        <p>Uriel Alejandro Tun Muñoz</p>
+    </footer>
+
+</body>
+</html>
